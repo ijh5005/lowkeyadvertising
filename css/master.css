@@ -6,6 +6,10 @@ body {
   padding: 0;
 }
 
+body {
+  background: linear-gradient(#31a5d7, #fff);
+}
+
 .flexRow {
   align-items: center;
   display: flex;
@@ -32,7 +36,6 @@ body {
 
 /*        ACCOUNT STATUS        */
 .accountStatus {
-  background-color: #31a5d7;
 }
 
 .logo,
@@ -40,12 +43,23 @@ body {
   width: 100%;
 }
 
+.balance p {
+  color: #fff;
+  font-size: 10em;
+  letter-spacing: 3px;
+  margin: 0;
+  position: relative;
+  top: -0.5em;
+}
+
 .logo {
   height: 40%;
 }
 
 .logoImg {
-  height: 80%;
+  height: 100%;
+  position: relative;
+  top: 4em;
 }
 
 .balance {
@@ -54,5 +68,4 @@ body {
 
 /*        MENU        */
 .menu {
-  background-color: #fff;
 }
