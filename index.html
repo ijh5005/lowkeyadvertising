@@ -58,8 +58,8 @@
         <p class="cashoutText">cashout</p>
       </div>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script>
         if (annyang) {
           const pauseHandle = () => {
@@ -114,7 +114,12 @@
 
           // Add our commands to annyang
           annyang.addCommands(commands);
+          //
+          annyang.addCallback('start', function(cb){
+            console.log('callback:' + cb);
+          })
           // debugger
+          debugger
           annyang.debug();
           // Start listening. You can call this here, or attach this call to an event, button, etc.
           annyang.start();
