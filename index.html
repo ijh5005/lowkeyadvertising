@@ -65,42 +65,43 @@
           // Let's define our first command. First the text we expect, and then the function it should call
           var commands = {
             'amazon *val': function() {
+              console.log('amazon');
               $('.balance p').text('amazon');
-              console.log('hey');
             },
             'barnes and noble *val': function() {
+              console.log('barnes');
               $('.balance p').text('barnes');
-              console.log('hey');
             },
             'gatorade *val': function() {
+              console.log('gatorade');
               $('.balance p').text('gatorade');
-              console.log('hey');
             },
             'dominos pizza *val': function() {
+              console.log('dominos');
               $('.balance p').text('dominos');
-              console.log('hey');
             },
             'major league hacking *val': function() {
+              console.log('major');
               $('.balance p').text('major');
-              console.log('hey');
             },
             'spotify *val': function() {
+              console.log('spotify');
               $('.balance p').text('spotify');
-              console.log('hey');
             },
             'steam *val': function() {
+              console.log('steam');
               $('.balance p').text('steam');
-              console.log('hey');
             },
             'wawa *val': function() {
+              console.log('wawa');
               $('.balance p').text('wawa');
-              console.log('hey');
             },
           };
 
           // Add our commands to annyang
           annyang.addCommands(commands);
-
+          // debugger
+          annyang.debug();
           // Start listening. You can call this here, or attach this call to an event, button, etc.
           annyang.start();
         }
