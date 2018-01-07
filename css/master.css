@@ -101,12 +101,25 @@ body {
 }
 
 .cashout {
-  background-color: #2692c0;
   height: 20%;
   width: 100%;
 }
 
-.cashout p {
-  font-size: 4em;
+.dollarSign {
+  background-color: #31a5d7;
+  border-radius: 50%;
   color: #fff;
+  height: 8em;
+  width: 8em;
+}
+
+.dollarSign p {
+  font-size: 6em;
+  color: #fff;
+}
+
+.cashoutText {
+  color: #31a5d7;
+  font-size: 4em;
+  margin: 0;
 }
