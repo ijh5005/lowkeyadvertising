@@ -16,14 +16,10 @@ body {
   width: 100%;
 }
 
+/*        ACCOUNT STATUS        */
 .accountStatus {
   background-color: #31a5d7;
 }
-
-.menu {
-  background-color: #fff;
-}
-
 
 .logo,
 .balance {
@@ -38,4 +34,9 @@ body {
 .balance {
   background: pink;
   height: 60%;
+}
+
+/*        MENU        */
+.menu {
+  background-color: #fff;
 }
