@@ -58,15 +58,44 @@
         <p class="cashoutText">cashout</p>
       </div>
 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
       <script>
         if (annyang) {
           // Let's define our first command. First the text we expect, and then the function it should call
           var commands = {
-            'testing': function() {
+            'amazon *val': function() {
+              $('.balance p').text('amazon');
               console.log('hey');
-              // $('#tpsreport').animate({bottom: '-100px'});
-            }
+            },
+            'barnes and noble *val': function() {
+              $('.balance p').text('barnes');
+              console.log('hey');
+            },
+            'gatorade *val': function() {
+              $('.balance p').text('gatorade');
+              console.log('hey');
+            },
+            'dominos pizza *val': function() {
+              $('.balance p').text('dominos');
+              console.log('hey');
+            },
+            'major league hacking *val': function() {
+              $('.balance p').text('major');
+              console.log('hey');
+            },
+            'spotify *val': function() {
+              $('.balance p').text('spotify');
+              console.log('hey');
+            },
+            'steam *val': function() {
+              $('.balance p').text('steam');
+              console.log('hey');
+            },
+            'wawa *val': function() {
+              $('.balance p').text('wawa');
+              console.log('hey');
+            },
           };
 
           // Add our commands to annyang
