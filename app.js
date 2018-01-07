@@ -2,60 +2,67 @@ var express = require('express');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var path = require('path');
-
 const app = express();
+// var app2 = require('http').createServer(handler);
+// var io = require('socket.io')(app2);
+
+
+var index = require('./routes/index');
+
+// const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+var router = express.Router();
 app.use(express.static(__dirname + '/public'));
+
+
+app.use('/', index);
 
 app.get('/', function(req, res, next){
   res.send('ok')
 })
 
+// function handler (req, res) {
+//   io.sockets.on('connection', function (socket) {
+//     setInterval(() => {
+//       socket.emit("example-pong");
+//     }, 1000);
+//   });
+// }
+
+
+
+
+// app.get('/talktodevice', function(req, res, next){
+
+  // io.sockets.on('connection', function (socket) {
+  //
+  //   socket.emit("example-pong");
+  // // If we recieved a command from a client to start watering lets do so
+  // // socket.on('example-ping', function(data) {
+  // //       console.log("ping");
+  // //       delay = data["duration"];
+  // //       // Set a timer for when we should stop watering
+  // //       setTimeout(function(){
+  // //           socket.emit("example-pong");
+  // //       }, delay*1000);
+  // //   });
+  //
+  //
+  // });
+
+// })
+
 app.listen(3000);
 
+const pt = require('./lib/pts');
 
 
+app.get('/savePoints', (req, res, next) => {
+  res.send('good');
+})
 
-
-
-
-
-
-
-
-// var GOOGLE_APPLICATION_CREDENTIALS = require('./public/js/talktotext-b43545db4412.json');
-// gcloud auth activate-service-account --key-file=service-account-key-file
-// gcloud auth application-default print-access-token
-// access_token
-
-
-// var app = express();
-//
-// app.get('/', function(request, response, next){
-//   response.send('it is working');
-// })
-//
-// app.listen(3000);
-
-
-// Imports the Google Cloud client library.
-// const Storage = require('@google-cloud/storage');
-//
-// // Instantiates a client. If you don't specify credentials when constructing
-// // the client, the client library will look for credentials in the
-// // environment.
-// const storage = Storage();
-//
-// // Makes an authenticated API request.
-// storage
-//   .getBuckets()
-//   .then((results) => {
-//     const buckets = results[0];
-//
-//     console.log('Buckets:');
-//     buckets.forEach((bucket) => {
-//       console.log(bucket.name);
-//     });
-//   })
-//   .catch((err) => {
-//     console.error('ERROR:', err);
-//   });
+module.exports = app;
