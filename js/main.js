@@ -205,7 +205,7 @@ app.service('data', function(){
       "recognitionText":"wawa",
       "recognitionText2": "hoagie fest",
       "recognitionText3": "wawa",
-      "brandLogoPath":"./logoImages/steamLogo.png",
+      "brandLogoPath":"./logoImages/wawaLogo.png",
       "preferredColor": "#FFF"
     }
   ]
