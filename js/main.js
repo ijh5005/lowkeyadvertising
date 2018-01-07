@@ -13,78 +13,78 @@ app.controller('ctr1', ['$scope', "$timeout", 'serverService', 'data', function(
     serverService.talk();
   }
 
-  if (annyang) {
-    const pauseHandle = () => {
-      annyang.pause();
-      setTimeout(() => {
-        annyang.start();
-      }, 2000);
-    }
-
-    const cash = (index) => {
-      $scope.currentImg = data.company[index]["brandLogoPath"];
-      $scope.currentIndex = index;
-      data.company[index]++;
-      $scope.currentPrice = data.company[index]["points"];
-    }
-    // Let's define our first command. First the text we expect, and then the function it should call
-    var commands = {
-      'amazon': function() {
-        console.log('amazon');
-        cash(1);
-        $('.balance p').text('amazon');
-        pauseHandle();
-      },
-      'barnes and noble': function() {
-        console.log('barnes');
-        cash(2);
-        $('.balance p').text('barnes');
-        pauseHandle();
-      },
-      'gatorade': function() {
-        console.log('gatorade');
-        cash(3);
-        $('.balance p').text('gatorade');
-        pauseHandle();
-      },
-      'dominos pizza': function() {
-        console.log('dominos');
-        cash(4);
-        $('.balance p').text('dominos');
-        pauseHandle();
-      },
-      'major league hacking': function() {
-        console.log('major');
-        cash(5);
-        $('.balance p').text('major');
-        pauseHandle();
-      },
-      'spotify': function() {
-        console.log('spotify');
-        cash(6);
-        $('.balance p').text('spotify');
-        pauseHandle();
-      },
-      'steam': function() {
-        console.log('steam');
-        cash(7);
-        $('.balance p').text('steam');
-        pauseHandle();
-      },
-      'wawa': function() {
-        console.log('wawa');
-        cash(8);
-        $('.balance p').text('wawa');
-        pauseHandle();
-      },
-    };
-
-    // Add our commands to annyang
-    annyang.addCommands(commands);
-    annyang.debug();
-    // Start listening. You can call this here, or attach this call to an event, button, etc.
-    //annyang.start();
-  }
+  // if (annyang) {
+  //   const pauseHandle = () => {
+  //     annyang.pause();
+  //     setTimeout(() => {
+  //       annyang.start();
+  //     }, 2000);
+  //   }
+  //
+  //   const cash = (index) => {
+  //     $scope.currentImg = data.company[index]["brandLogoPath"];
+  //     $scope.currentIndex = index;
+  //     data.company[index]++;
+  //     $scope.currentPrice = data.company[index]["points"];
+  //   }
+  //   // Let's define our first command. First the text we expect, and then the function it should call
+  //   var commands = {
+  //     'amazon': function() {
+  //       console.log('amazon');
+  //       // cash(1);
+  //       $('.balance p').text('amazon');
+  //       pauseHandle();
+  //     },
+  //     'barnes and noble': function() {
+  //       console.log('barnes');
+  //       // cash(2);
+  //       $('.balance p').text('barnes');
+  //       pauseHandle();
+  //     },
+  //     'gatorade': function() {
+  //       console.log('gatorade');
+  //       // cash(3);
+  //       $('.balance p').text('gatorade');
+  //       pauseHandle();
+  //     },
+  //     'dominos pizza': function() {
+  //       console.log('dominos');
+  //       //cash(4);
+  //       $('.balance p').text('dominos');
+  //       pauseHandle();
+  //     },
+  //     'major league hacking': function() {
+  //       console.log('major');
+  //       //cash(5);
+  //       $('.balance p').text('major');
+  //       pauseHandle();
+  //     },
+  //     'spotify': function() {
+  //       console.log('spotify');
+  //       // cash(6);
+  //       $('.balance p').text('spotify');
+  //       pauseHandle();
+  //     },
+  //     'steam': function() {
+  //       console.log('steam');
+  //       // cash(7);
+  //       $('.balance p').text('steam');
+  //       pauseHandle();
+  //     },
+  //     'wawa': function() {
+  //       console.log('wawa');
+  //       // cash(8);
+  //       $('.balance p').text('wawa');
+  //       pauseHandle();
+  //     },
+  //   };
+  //
+  //   // Add our commands to annyang
+  //   annyang.addCommands(commands);
+  //   annyang.debug();
+  //   // Start listening. You can call this here, or attach this call to an event, button, etc.
+  //   //annyang.start();
+  // }
 
 }]);
 
