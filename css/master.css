@@ -39,7 +39,9 @@ body {
 }
 
 .logo,
-.balance {
+.balance,
+.slider,
+.cashout {
   width: 100%;
 }
 
@@ -67,5 +69,36 @@ body {
 }
 
 /*        MENU        */
+
 .menu {
+}
+
+.slider {
+  height: 80%;
+  overflow-x: scroll;
+  position: relative;
+}
+
+.panelHolder {
+  display: flex;
+  left: 0;
+  min-height: min-content;
+  position: absolute;
+  top: 0;
+}
+
+.panel {
+  background-color: #2692c0;
+  border-radius: 1em;
+  height: 24em;
+  margin: 0 1em;
+  width: 24em;
+}
+
+.panel img {
+  width: 80%;
+}
+
+.cashout {
+  height: 20%;
 }
