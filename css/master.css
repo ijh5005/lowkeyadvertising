@@ -2,8 +2,21 @@ html,
 body {
   font-family: 'Assistant', sans-serif;
   margin: 0;
-  padding: 0;
   overflow: hidden;
+  padding: 0;
+}
+
+.flexRow {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.flexCol {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container {
@@ -29,6 +42,10 @@ body {
 
 .logo {
   height: 40%;
+}
+
+.logoImg {
+  height: 80%;
 }
 
 .balance {
